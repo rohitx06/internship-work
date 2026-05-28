@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 import "./TaskCard.css";
 import Tag from "./Tag";

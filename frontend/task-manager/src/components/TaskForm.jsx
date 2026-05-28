@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 import "./TaskForm.css";
 
@@ -9,37 +9,17 @@ const TaskForm = ({ setTasks }) => {
     tags: [],
   });
 
-  const checkTag = (tag) => {
-    return taskData.tags.some((item) => item === tag);
-  };
-
-  const selectTag = (tag) => {
-    if (taskData.tags.some((item) => item === tag)) {
-      const filterTags = taskData.tags.filter((item) => item !== tag);
-      setTaskData((prev) => {
-        return { ...prev, tags: filterTags };
-      });
-    } else {
-      setTaskData((prev) => {
-        return { ...prev, tags: [...prev.tags, tag] };
-      });
-    }
-  };
-
   const handleChange = (e) => {
     const { name, value } = e.target;
-
-    setTaskData((prev) => {
-      return { ...prev, [name]: value };
-    });
+    setTaskData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(taskData);
-    setTasks((prev) => {
-      return [...prev, taskData];
-    });
+    setTasks((prev) => [...prev, taskData]);
     setTaskData({
       task: "",
       status: "todo",
