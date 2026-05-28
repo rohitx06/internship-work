@@ -1,0 +1,75 @@
+.task_card {
+    width: 100%;
+    min-height: 110px;
+    border: none;
+    border-radius: 22px;
+    padding: 22px;
+    margin: 16px 0;
+    background: #ffffff;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+    cursor: grab;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.task_card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 24px 45px rgba(15, 23, 42, 0.12);
+}
+
+.task_card:active {
+    cursor: grabbing;
+}
+
+.task_card.dragging {
+    opacity: 0.65;
+    background-color: #f7f8ff;
+    transform: scale(0.98);
+}
+
+.task_text {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 14px;
+    color: #111827;
+}
+
+.task_card_bottom_line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.task_card_tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.task_delete {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.task_delete:hover {
+    background-color: #f2f4ff;
+    transform: scale(1.02);
+}
+
+.delete_icon {
+    width: 20px;
+    opacity: 0.65;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.task_delete:hover .delete_icon {
+    opacity: 1;
+    transform: scale(1.05);
+}

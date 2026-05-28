@@ -1,0 +1,39 @@
+.task_column {
+    padding: 24px;
+    background: #ffffff;
+    border-radius: 28px;
+    box-shadow: 0 24px 52px rgba(15, 23, 42, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    min-height: 380px;
+}
+
+.task_column:hover {
+    transform: translateY(-3px);
+}
+
+.task_column.drag-over {
+    background-color: #eef4ff;
+    border: 2px dashed #647cff;
+}
+
+.task_column_heading {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 18px;
+}
+
+.task_column_icon {
+    width: 32px;
+    margin-right: 10px;
+    filter: drop-shadow(0 1px 1px rgba(31, 41, 55, 0.12));
+}
+
+@media (max-width: 720px) {
+    .task_column {
+        min-height: auto;
+        padding: 20px;
+    }
+}
